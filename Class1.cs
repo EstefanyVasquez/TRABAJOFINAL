@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace TRABAJOFINAL
 {
@@ -11,11 +13,11 @@ namespace TRABAJOFINAL
     {
         public static SqlConnection Conectar()
         {
-            SqlConnection cn = new SqlConnection("SERVER= DESKTOP-N1R7OD4; DATABASE= Consultorio; integrated security=true;");
+            SqlConnection cn = new SqlConnection(@"server=JOSE2021\SQLEXPRESS; database=Consultorio; Integrated security=true;");
             cn.Open();
             return cn;
-
         }
+
     }
 }
 

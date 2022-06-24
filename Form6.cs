@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,35 @@ namespace TRABAJOFINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form forulario = new Form7();
-            forulario.Show();
+            try
+            {
+                if (textBox1.Text != "")
+                {
+                    loggin dni = new loggin();
+                    Class1 conexion = new Class1();
+                    DataTable tb = dni.dni(Convert.ToInt32(textBox1.Text), Class1.Conectar());
+
+                    if (tb.Rows.Count > 0)
+                    {
+
+                        this.Hide();
+                        Form forulario = new Form7();
+                        forulario.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("DNI incorrecto");
+                        if (textBox1.Text == "")
+                        {
+                            textBox1.Focus();
+                        }
+
+                    }
+                }
+            }
+            catch { }
+
+
         }
     }
 }

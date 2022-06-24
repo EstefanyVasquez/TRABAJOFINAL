@@ -51,6 +51,7 @@ namespace TRABAJOFINAL
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aYUDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNFORMACIONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -161,7 +162,7 @@ namespace TRABAJOFINAL
             this.textBox4.BackColor = System.Drawing.Color.BlueViolet;
             this.textBox4.Location = new System.Drawing.Point(172, 298);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 20);
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 10;
             // 
             // textBox5
@@ -169,19 +170,18 @@ namespace TRABAJOFINAL
             this.textBox5.BackColor = System.Drawing.Color.BlueViolet;
             this.textBox5.Location = new System.Drawing.Point(172, 356);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(142, 20);
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 11;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.BlueViolet;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(172, 416);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 12;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -191,6 +191,7 @@ namespace TRABAJOFINAL
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(417, 241);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
@@ -203,6 +204,7 @@ namespace TRABAJOFINAL
             this.button2.TabIndex = 15;
             this.button2.Text = "AGREGAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -215,6 +217,7 @@ namespace TRABAJOFINAL
             this.button3.TabIndex = 16;
             this.button3.Text = "MODIFICAR";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -227,7 +230,7 @@ namespace TRABAJOFINAL
             this.button4.TabIndex = 17;
             this.button4.Text = "ELIMIINAR";
             this.button4.UseVisualStyleBackColor = false;
-
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -240,6 +243,7 @@ namespace TRABAJOFINAL
             this.button5.TabIndex = 18;
             this.button5.Text = "NUEVO";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // menuStrip1
             // 
@@ -274,12 +278,23 @@ namespace TRABAJOFINAL
             this.iNFORMACIONToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
             this.iNFORMACIONToolStripMenuItem.Text = "INFORMACION";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.BlueViolet;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(293, 298);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(52, 21);
+            this.comboBox2.TabIndex = 20;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(863, 499);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -335,5 +350,6 @@ namespace TRABAJOFINAL
         private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aYUDAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iNFORMACIONToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

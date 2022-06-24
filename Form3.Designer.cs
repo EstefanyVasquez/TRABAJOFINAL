@@ -138,6 +138,7 @@ namespace TRABAJOFINAL
             this.textBox4.BackColor = System.Drawing.Color.BlueViolet;
             this.textBox4.Location = new System.Drawing.Point(278, 309);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(172, 20);
             this.textBox4.TabIndex = 9;
             // 

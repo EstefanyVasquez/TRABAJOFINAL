@@ -19,9 +19,31 @@ namespace TRABAJOFINAL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form formulario = new Form2();
-            formulario.Show();
+            loggin loggin = new loggin();
+            Class1 conexion = new Class1();
+            DataTable tb = loggin.login(textBox1.Text, textBox2.Text, Class1.Conectar());
+
+            if (tb.Rows.Count > 0)
+            {
+
+                this.Hide();
+                Form formulario = new Form2();
+                formulario.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario incorrecto");
+                if (textBox1.Text == "")
+                {
+                    textBox1.Focus();
+                }
+                else
+                {
+                    textBox2.Focus();
+                }
+
+            }
+
 
         }
 
@@ -30,6 +52,11 @@ namespace TRABAJOFINAL
             this.Hide();
             Form forulario = new Form3();
             forulario.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
